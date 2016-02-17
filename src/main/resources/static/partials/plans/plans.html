@@ -1,0 +1,23 @@
+<h3>Story plans</h3>
+
+<div ng-repeat="plan in plans">
+	<br/>
+	<h4>Plan for week from {{plan.startDate}} to {{plan.endDate}}</h4>
+	<br/>
+	<table class="table developerstable">
+		<tr>
+			<td>Title</td>
+			<td>Creation Date</td>
+			<td>Developer Name</td>
+			<td>Point</td>
+			<td>Status</td>
+		</tr>
+		<tr ng-repeat="story in plan.stories">
+			<td>{{story.title}}</td>
+			<td>{{story.creationDate}}</td>
+			<td>{{story.developer.name}}</td>
+			<td>{{story.point}}</td>
+			<td>{{story.status}}</td>
+		</tr>
+	</table>
+</div>

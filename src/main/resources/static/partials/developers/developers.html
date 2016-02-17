@@ -1,0 +1,13 @@
+<table class="table developerstable">
+	<tr>
+		<td><h3>All Developers</h3></td>
+		<td></td>
+	</tr>
+	<tr ng-repeat="developer in developers">
+		<td>{{developer.name}}</td>
+		<td>
+			<a class="btn btn-primary" ui-sref="viewDeveloper({id:developer.id})">View</a>
+			<a class="btn btn-danger"  ng-click="deleteDeveloper(developer)">Delete</a>
+		</td>
+	</tr>
+</table>
